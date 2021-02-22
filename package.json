@@ -1,0 +1,9 @@
+{
+    "name": "MailTester",
+    "format": "xml",
+    "description": "A basic module to send emails and verify SMTP functions",
+    "files": ["MailTester.xml"],
+    "repository": {},
+    "version": "1",
+    "dependencies": {"Simplicite": "5"}
+}
