@@ -23,6 +23,8 @@ A basic module to send emails and verify SMTP functions
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `mtsSndMail`                                                 | email(250)                               | yes*     | yes       |          | -                                                                                |
+| `mtsSndContent`                                              | text(300)                                | yes      | yes       |          | -                                                                                |
+| `mtsSndAttachment`                                           | document                                 |          | yes       |          | -                                                                                |
 
 ### Custom actions
 

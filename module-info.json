@@ -1,9 +1,9 @@
 {
+    "date": "2024-06-10 09:49:20",
     "name": "MailTester",
     "format": "xml",
-    "description": "A basic module to send emails and verify SMTP functions",
     "files": ["MailTester.xml"],
     "repository": {},
     "version": "1",
-    "dependencies": {"Simplicite": "5"}
+    "platform": "5.3.38"
 }

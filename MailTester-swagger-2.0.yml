@@ -3,6 +3,7 @@
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
 #             |_| Module: MailTester 1
+basePath: /api
 paths:
   /rest/MtsSender:
     get:
@@ -45,6 +46,16 @@ paths:
       - in: query
         name: mtsSndMail
         description: Search filter for Mail
+        type: string
+        required: false
+      - in: query
+        name: mtsSndContent
+        description: Search filter for Content
+        type: string
+        required: false
+      - in: query
+        name: mtsSndAttachment
+        description: Search filter for Attachment
         type: string
         required: false
       tags:
@@ -96,7 +107,7 @@ paths:
       - session
   /rest/MtsSender/{row_id}:
     post:
-      summary: Create a new MtsSenderbusiness object record
+      summary: Create a new MtsSender business object record
       security:
       - bearerAuth: []
       produces:
@@ -215,7 +226,7 @@ paths:
       tags:
       - MtsSender
     put:
-      summary: Update a MtsSenderbusiness object record
+      summary: Update a MtsSender business object record
       security:
       - bearerAuth: []
       produces:
@@ -279,6 +290,9 @@ paths:
         required: false
       tags:
       - session
+host: pof-dev.minint.fr
+schemes:
+- https
 securityDefinitions:
   basicAuth:
     type: basic
@@ -323,6 +337,27 @@ definitions:
       content:
         description: Content (plain text or base64 encoded)
         type: string
+  PlaceData:
+    type: object
+    properties:
+      coord:
+        description: Geographical coordinates
+        type: string
+      address:
+        description: Address
+        type: string
+      row_id:
+        description: Row ID
+        type: string
+      label1:
+        description: 'Label #1'
+        type: string
+      label2:
+        description: 'Label #2'
+        type: string
+      label3:
+        description: 'Label #3'
+        type: string
   Error400:
     type: object
     properties:
@@ -356,14 +391,31 @@ definitions:
         type: integer
         enum:
         - 500
+  PlaceMapData:
+    type: object
+    properties:
+      places:
+        description: Places
+        type: array
+        items:
+          $ref: '#/definitions/PlaceData'
+      name:
+        description: Name
+        type: string
   MtsSender:
     type: object
     properties:
+      mtsSndAttachment:
+        description: Attachment
+        type: object
       mtsSndMail:
         description: Mail
         type: string
       row_id:
         description: Unique technical row ID
+        type: string
+      mtsSndContent:
+        description: Content
         type: string
   Error403:
     type: object
