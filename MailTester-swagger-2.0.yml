@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: MailTester 1
+#             |_| Module: MailTester 1.1.0
 basePath: /api
 paths:
   /rest/MtsSender:
@@ -439,7 +439,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module MailTester
   title: MailTester
-  version: '1'
+  version: 1.1.0
 tags:
 - name: MtsSender
   description: Tester
