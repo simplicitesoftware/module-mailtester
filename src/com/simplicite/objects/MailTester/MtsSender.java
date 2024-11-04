@@ -31,7 +31,7 @@ public class MtsSender extends ObjectDB {
 		MailTool mail = new MailTool(); 
 		mail.addRcpt(getFieldValue("mtsSndMail")); 
 		mail.setSubject("Simplicité SMTP Service Test"); 
-		mail.setContent(getFieldValue("mtsSndContent"));
+		mail.setBody(getFieldValue("mtsSndContent"));
 		if(!Tool.isEmpty(getFieldValue("mtsSndAttachment")))
 			mail.addAttach(this, getField("mtsSndAttachment"));
 		mail.send();
