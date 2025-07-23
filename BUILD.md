@@ -8,7 +8,14 @@ Build
 -----
 
 ``` text
-mvn -U -DskipTests=true clean package
+mvn clean package
+```
+
+Javadoc
+-------
+
+``` text
+mvn javadoc:javadoc
 ```
 
 Sonar analysis
@@ -16,5 +23,36 @@ Sonar analysis
 
 ``` text
 mvn sonar:sonar
+```
+
+Checkstyle (optional)
+---------------------
+
+``` text
+mvn checkstyle:check
+```
+
+JSHint (optional, requires node.js)
+-----------------------------------
+
+``` text
+npm install
+npm run jshint
+```
+
+ESLint (optional, requires node.js)
+-----------------------------------
+
+``` text
+npm install
+npm run eslint
+```
+
+StyleLint (optional, requires node.js)
+--------------------------------------
+
+``` text
+npm install
+npm run stylelint
 ```
 

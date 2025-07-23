@@ -5,9 +5,13 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>MailTester</mdl_name>
-		<mdl_version>1.3.0</mdl_version>
+		<mdl_version>1.4.0</mdl_version>
 		<mdl_prefix>mts</mdl_prefix>
-		<mdl_url/>
+		<mdl_url><![CDATA[{
+	"maven": {
+		"repositoryUrl": "https://platform.simplicite.io/6.2/maven"
+	}
+}]]></mdl_url>
 		<mdl_type>T</mdl_type>
 		<mdl_comment><![CDATA[A basic module to send emails and verify SMTP functions]]></mdl_comment>
 	</data>
